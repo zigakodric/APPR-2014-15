@@ -1,6 +1,6 @@
 # Analiza podatkov s programom R, 2014/15
 
-Avtor: Žiga Kodrič
+Avtor: Kodrič Žiga
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2014/15.
 
