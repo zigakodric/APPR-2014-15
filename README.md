@@ -1,4 +1,5 @@
 # Analiza podatkov s programom R, 2014/15
+## Raven izobraževanja po svetu
 
 Avtor: Kodrič Žiga
 
@@ -6,8 +7,12 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2014/15.
 
 ## Tematika
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal. Tukaj boste
-napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Za temo projekta sem si izbral raven izobraževanja po svetu. Namen imam analizirati razlike med izobroževanjem v razvitih državah in državah tretjega sveta, vlaganje država v izobroževanje, število vključenih otrok v izobroževalni sistem ipd. 
+
+Podatke sm dobil na spletni strani svetovne banke. NA voljo so v .hmtl in cvs datotekah. Po potrebi bom poiskal še dodatne podatke.
+
+Povezava do podatkov:
+databank.worldbank.org/data/projekt/id/53771e2b
 
 ## Program
 
