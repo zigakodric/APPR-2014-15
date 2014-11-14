@@ -7,9 +7,9 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2014/15.
 
 ## Tematika
 
-Za temo projekta sem si izbral raven izobraževanja po svetu. Namen imam analizirati razlike med izobroževanjem v razvitih državah in državah tretjega sveta, vlaganje država v izobroževanje, število vključenih otrok v izobroževalni sistem ipd. 
+Za temo projekta sem si izbral raven izobraževanja po svetu. Namen imam analizirati vlaganje držav v izobraževanje, število vključenih otrok v izobraževalni sistem ipd. Analiziral bom tudi razlike med izobraževalnim sistemom v razvitih državah in državah tretjega sveta.
 
-Podatke sm dobil na spletni strani svetovne banke. NA voljo so v .hmtl in cvs datotekah. Po potrebi bom poiskal še dodatne podatke.
+Podatke sm dobil na spletni strani svetovne banke. Na voljo so v .hmtl in cvs datotekah. Po potrebi bom poiskal še dodatne podatke.
 
 Povezava do podatkov:
 databank.worldbank.org/data/projekt/id/53771e2b
