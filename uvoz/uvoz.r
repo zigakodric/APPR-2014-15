@@ -1,19 +1,13 @@
 # 2. faza: Uvoz podatkov
 
-# Funkcija, ki uvozi podatke iz datoteke druzine.csv
-uvoziDruzine <- function() {
-  return(read.table("podatki/druzine.csv", sep = ";", as.is = TRUE,
-                      row.names = 1,
-                      col.names = c("obcina", "en", "dva", "tri", "stiri"),
+uvoziPodatke <- function() {
+  return(read.table("podatki/podatki.csv", sep = ",", as.is = TRUE,
+                
+                      col.names = c("x", "x", "Country Name", "x", "School enrollment,tertiary (% gross)",  "Expenditure per student, primary (%of GDP per capita)",  "Expenditure per student,secondary (% of GDP per capita)",  "Expenditure per student, tertiary (% of GDP per capita)",  "Public spending on education, total (% of government expenditure)", "Labor force with primary education (% of total)", "Labor force with secondary education (% of total)", "Labor force with tertiary education (% of total)", "Labor force, total", "Unemployment,total (% of total labor force)", "Population ages 0-14 (% of total)",   "Population ages 15-64 (% of total)", " Literacy rate, youth total(% of people ages 15-24)", "Literacy rate, adult total (% of people ages 15 and above)", "School enrollment, preprimary (% gross)",  "Primary school starting age (years)",  "Primary completion rate, total (% of relevant age group)",  "Primary education, duration (years)",  "School enrollment, primary (% gross)", "Gross intake ratio in first grade of primary education, total (% of relevant age group)",  "School enrollment, primary (% net)",  "School enrollment, primary, private (%
+of total primary)",  "Trained teachers in primary education (% of total teachers)",   "Primary education, teachers",   "Children out of school, primary",  "Secondary school starting age (years)",  "Secondary education, duration (years)",  "School enrollment, secondary (% gross)",
+                                    " School enrollment, secondary, private (% of total secondary)",  "Progression to secondary school (%)", "Repeaters, secondary, total (% of total enrollment)", "Secondary education, teachers" ),
                       fileEncoding = "Windows-1250"))
 }
 
-# Zapišimo podatke v razpredelnico druzine.
-cat("Uvažam podatke o družinah...\n")
-druzine <- uvoziDruzine()
-
-# Če bi imeli več funkcij za uvoz in nekaterih npr. še ne bi
-# potrebovali v 3. fazi, bi bilo smiselno funkcije dati v svojo
-# datoteko, tukaj pa bi klicali tiste, ki jih potrebujemo v
-# 2. fazi. Seveda bi morali ustrezno datoteko uvoziti v prihodnjih
-# fazah.
+cat("Uvažam podatke o izobraževanju...\n")
+Tabela <- uvoziPodatke()
