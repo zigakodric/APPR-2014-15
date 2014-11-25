@@ -11,3 +11,6 @@ of total primary)",  "Trained teachers in primary education (% of total teachers
 
 cat("Uvažam podatke o izobraževanju...\n")
 Tabela <- uvoziPodatke()
+Tabela[,"x"] <- NULL
+Tabela[, "x.1"] <- NULL
+Tabela[, "x.2"] <- NULL
