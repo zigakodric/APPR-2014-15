@@ -9,12 +9,12 @@ stripByPath <- function(x, path) {
                                           xmlValue(y)))))
 }
 uvozi.evropa <- function() {
-  url.rodnostEU <- "http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&language=en&pcode=tsdsc410&plugin=1"
-  con <- url(url.rodnostEU)
-  doc.rodnostEU <- htmlTreeParse(readLines(con), useInternalNodes=TRUE)
+  url.evropa <- "http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&language=en&pcode=tsdsc410&plugin=1"
+  con <- url(url.evropa)
+  doc.evropa <- htmlTreeParse(readLines(con), useInternalNodes=TRUE)
   close(con)
   # Poiščemo vse tabele v dokumentu
-  tabele <- getNodeSet(doc.rodnostEU, "//table")
+  tabele <- getNodeSet(doc.evropa, "//table")
   # Iz druge tabele dobimo seznam vrstic (<tr>) neposredno pod
   # trenutnim vozliščem
   vrstice <- getNodeSet(tabele[[6]], ".//tr")
