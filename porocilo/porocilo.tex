@@ -3,6 +3,7 @@
 \usepackage[slovene]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{graphicx}
+\usepackage{url}
 
 \pagestyle{plain}
 
@@ -17,17 +18,19 @@ Za temo projekta sem si izbral raven izobraževanja po svetu. Namen imam analizi
 \\
 Podatke sm dobil na spletni strani svetovne banke. Na voljo so v .hmtl in cvs datotekah. Po potrebi bom poiskal še dodatne podatke.
 \\
-Povezava do podatkov: databank.worldbank.org/data/projekt/id/53771e2b
+Povezava do podatkov: \url{http://databank.worldbank.org/data/projekt/id/53771e2b}
 \section{Obdelava, uvoz in čiščenje podatkov}
 Pri uvozu podatkov nisem imel večjih težav. V mapi uvoz sem napisal funkcijo za uvoz podatkov iz datokeke podatki.cvs. Dodal sem še ukaze, da mi pobriše nepotrebne stolpce. Težava je nastala le ob pogonu programa, saj je imel eden izmed podatkov vejico, kar pa sem opazil in popravil. \\
 Za uvoz podatkov iz xml oblike sem poiskal novo podatke, saj sem imel pri poiskusu uvoza iz obstoječe strani nekaj težav. \\
 Odločil sem se, da bom za graf uvozil nove podatke( tudi oblike cvs.). Graf sem uporabil standardni, saj se mi je zdel najbolj primeren.
+\includegraphics{../slike/grafi.pdf}
 \section{Analiza in vizualizacija podatkov}
 
-\includegraphics{../slike/povprecna_druzina.pdf}
 
 \section{Napredna analiza podatkov}
+Odločil sem se, da bom naredil 4 zemljevide. Prvi zemljevid prikazuje delež državljanov evropskih držav, ki predčasno zapustijo šolane(v odstotkih). Drugi zemljevid prikazuje povprečno število študentov po slovenskih regijah v zadnjih destih letih. Tretji in četrti zemljevid pa prikazujeta spremembo števila študentov po regijah med letoma 2002 in 2013.
 
-\includegraphics{../slike/naselja.pdf}
-
-\end{document}
+\includegraphics[width=\textwidth]{../slike/EU.pdf}
+\includegraphics[width=\textwidth]{../slike/slovenija1.pdf}
+\includegraphics[width=\textwidth]{../slike/stud2002.pdf}
+\includegraphics[width=\textwidth]{../slike/stud2013.pdf}
