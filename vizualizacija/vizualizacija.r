@@ -27,8 +27,8 @@ cat("Uvažam zemljevid sveta...\n")
 svet <- uvozi.zemljevid("http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip",
                         "Europa", "ne_110m_admin_0_countries.shp", mapa = "zemljevid",
                         encoding = "Windows-1250")
-#EU <- svet[svet$name %in% rownames(RodnostEU),]
-#Dodamo mankajoče države
+
+
 
 manjkajoce.drzave <- c() 
 drzave <- c(rownames(evropa), manjkajoce.drzave)
