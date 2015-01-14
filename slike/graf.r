@@ -11,5 +11,5 @@ uvoziPodatkeGraf <- function() {
 TabelaGraf <- uvoziPodatkeGraf()
 Leto <- TabelaGraf[, "x.2"]
 Št_študentovZDA <- TabelaGraf[, "x.4"]
-plot(Leto, Št_študentovZDA, xlab = "Leto", ylab = "Število študentov", type = "l" main = "Število študentov v ZDA")
+plot(Leto, Št_študentovZDA, xlab = "Leto", ylab = "Število študentov", type = "l" main = "Število študentov v ZDA", cex = 0.5)
 dev.off()
