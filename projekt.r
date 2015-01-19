@@ -1,5 +1,6 @@
 # 2. faza: Obdelava, uvoz in čiščenje podatkov
 source("uvoz/uvoz.r",encoding="UTF-8")
+source("lib/xml.r")
 source("slike/graf.r",encoding="UTF-8")
 # # 3. faza: Analiza in vizualizacija podatkov
 # source("vizualizacija/vizualizacija.r")
