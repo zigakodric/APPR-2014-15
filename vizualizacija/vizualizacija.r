@@ -19,8 +19,8 @@ preuredi <- function(podatki, zemljevid) {
   return(out)
 }
 
-  
-  
+
+
 # 1ZEMLJEVID Evropa
 # Uvozimo zemljevid.
 cat("Uvažam zemljevid sveta...\n")
@@ -87,17 +87,6 @@ imena1["Jugovzhodna Slovenija"] <- "Jugovzhodna\nSlovenija"
 imena1["Notranjsko-kraška"] <- "Notranjsko-\nkraška"
 imena1["Obalno-kraška"] <- "Obalno-\nkraška"
 
-#ZEMLJEVID POVPREČJA
-rregije$povprecje <- apply(rregije,1, function(x) mean(x))
-min.povprecje <- min(rregije[12], na.rm=TRUE)
-max.povprecje <- max(rregije[12], na.rm=TRUE)
-norm.povprecje <- (rregije[12]-min.povprecje)/(max.povprecje-min.povprecje)
-n = 100
-barve =rgb(1, 1, (n:1)/n)[unlist(1+(n-1)*norm.povprecje)]
-plot(slo, col = barve,bg="lightblue")
-text(koordinate1,labels=imena1,cex=0.4)
-title("Povprečno število študentov po slovenskih regijah v zadnjih 10 letih")
-dev.off()
 
 # 3 Primerjava med letoma 2002 in 2013
 #2002
@@ -110,7 +99,7 @@ dev.off()
 
 #2013
 pdf("slike/stud2013.pdf")
-slo$studneti2013 <- rregije[,12]
+slo$studneti2013 <- rregije[,11]
 print(spplot(slo, "studneti2013", col.regions = topo.colors(50),
              main = "Število študentov po regijah (leto 2013)",
              sp.layout = list(list("sp.text", koordinate1,imena1, cex = 0.5))))
