@@ -11,14 +11,74 @@ Tabela <- uvoziPodatke()
 Tabela[,"x"] <- NULL
 Tabela[, "x.1"] <- NULL
 Tabela[, "x.2"] <- NULL
-
 #Uvoz podatkov za zemlejvid
-
 uvoziregije <- function() {
   return(read.csv("podatki/regije.csv", sep = ";", as.is = TRUE, encoding = "UTF-8" ,
                   row.names = 1, na.strings=c("-", "z"),
                   fileEncoding = "Windows-1250"))
 }
 regije <- uvoziregije()
+#Podatki za graf ZDA
+uvoziPodatkeGraf <- function() {
+  return(read.table("podatki/grafzda.csv", sep = ",", as.is = TRUE,
+                    
+                    col.names = c("x","x", "x","x","x"),
+                    fileEncoding = "Windows-1250"))
+}
+
+TabelaGraf <- uvoziPodatkeGraf()
+
+#Uvoz podatkov za graf(Kitajska):
+uvoziPodatkeGrafKit <- function() {
+  return(read.table("podatki/kitgraf.csv", sep = ",", as.is = TRUE,
+                    
+                    col.names = c("x","x", "x","x","x"),
+                    fileEncoding = "Windows-1250"))
+}
+
+TabelaGrafKit <- uvoziPodatkeGrafKit()
+
+#Tabela za 4. fazo projekta:
+ana <- function() {
+  return(read.table("podatki/analiza.csv", sep = ";", as.is = TRUE, header = TRUE,
+                    
+                    fileEncoding = "Windows-1250"))
+}
 
 
+anapod <- ana()
+
+#Tabela za 4. fazo projekta(ZDA):
+anazd <- function() {
+  return(read.table("podatki/analizazda.csv", sep = ";", as.is = TRUE, header = TRUE,
+                    
+                    fileEncoding = "Windows-1250"))
+}
+
+
+anazda <- anazd()
+
+#Tabela za graf pri 4. fazi:
+
+anagrslo <- function() {
+  return(read.table("podatki/grafana.csv", sep = ";", as.is = TRUE, header = TRUE,
+                    
+                    fileEncoding = "Windows-1250"))
+}
+
+
+anagrs <- anagrslo()
+
+#Tabela za graf za ZDA pri 4. fazi:
+
+anagrzda <- function() {
+  return(read.table("podatki/granazd.csv", sep = ";", as.is = TRUE, header = TRUE,
+                    
+                    fileEncoding = "Windows-1250"))
+}
+
+
+anagrzda <- anagrzda()
+
+#Uvoz podatkov za metodo voditeljev
+podatkisvet <- read.csv("podatki/svet.csv", row.names=1,fileEncoding = "UTF-8")
