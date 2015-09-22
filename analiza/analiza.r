@@ -39,7 +39,7 @@ lines(z, col = "green")
 mls <- loess(rast ~ ststud)
 curve(predict(mls, data.frame(ststud=x)), add = TRUE, col = "magenta")
 #Legenda
-legend("bottomright", c("Linerana metoda", "Kvadratna metoda","Prileganje z zlepki","Loess"),lty=c(1,1,1,1), col = c("blue","red","green", "magenta"))
+legend("bottomright", c("Linerana metoda", "Kvadratna metoda","Prileganje z zlepki","Loess"),lty=c(1,1,1,1), col = c("blue","red","green", "magenta"), bg = "white", cex=0.9,)
 dev.off()
 
 #GRAF
@@ -48,7 +48,7 @@ z<-anagrs[1:16, 2]
 y<-anagrs[1:16, 3]
 library(plotrix)
 twoord.plot(anagrs[1:16, 1], z, anagrs[1:16, 1], y, type = "l", xlab="Leto",
-            ylab="Rast BDP-ja", rylab="Stevilo studentov",
+            ylab="Rast BDP-ja", rylab="Stevilo studentov v tisocih",
             main="Rast BDP-ja in stevilo studentov", lcol="lightblue", rcol="blue")
 
 dev.off()
@@ -58,7 +58,7 @@ dev.off()
 pdf("slike/napovedzda.pdf", width=6, height=4)
 rastzda <- anazda$RastZDA
 ststudzda <- anazda$Stevilo.studentov.ZDA
-plot(ststudzda, rastzda, xlab="Stevilo studentov", 
+plot(ststudzda, rastzda, xlab="Stevilo studentov v stotisocih", 
      ylab="Stopnja rasti", main="Napoved za ZDA",
 )
 #Premica
@@ -75,7 +75,7 @@ lines(z, col = "green")
 mls <- loess(rastzda ~ ststudzda)
 curve(predict(mls, data.frame(ststudzda=x)), add = TRUE, col = "magenta")
 #Legenda
-legend("bottomright", c("Linerana metoda", "Kvadratna metoda","Prileganje z zlepki","Loess"),lty=c(1,1,1,1), col = c("blue","red","green", "magenta"))
+legend("bottomright", c("Linerana metoda", "Kvadratna metoda","Prileganje z zlepki","Loess"),lty=c(1,1,1,1), col = c("blue","red","green", "magenta"), bg = "white", cex=0.9,)
 dev.off()
 
 #GRAF ZDA
@@ -84,7 +84,7 @@ z<-anagrzda[1:27, 2]
 y<-anagrzda[1:27, 3]
 library(plotrix)
 twoord.plot(anagrzda[1:27, 1], z, anagrzda[1:27, 1], y, type = "l", xlab="Leto",
-            ylab="Rast BDP-ja", rylab="Stevilo studentov",
+            ylab="Rast BDP-ja", rylab="Stevilo studentov v stotisocih",
             main="Rast BDP-ja in stevilo studentov", lcol="lightblue", rcol="blue")
 
 dev.off()
