@@ -11,46 +11,69 @@
 \title{Poročilo pri predmetu \\
 Analiza podatkov s programom R}
 \author{Žiga Kodrič}
-\maketitle
+\maketitle{\section{Izbira teme}}
 
-\section{Izbira teme}
-
-\\
 Podatke za svet sem pridobil na spletni strani svetovne banke, za Evropa na strani OECD in za Slovenijo na spletni strani statističnega urada Slovenije. Na voljo so v .hmtl in cvs datotekah
-\\
+
 Povezava do podatkov: \url{http://databank.worldbank.org/data/projekt/id/53771e2b}
 \section{Obdelava, uvoz in čiščenje podatkov}
-Pri uvozu podatkov nisem imel večjih težav. V mapi uvoz sem napisal funkcijo za uvoz podatkov iz datokeke podatki.cvs. Dodal sem še ukaze, da mi pobriše nepotrebne stolpce. Težava je nastala le ob pogonu programa, saj je imel eden izmed podatkov vejico, kar pa sem opazil in popravil. \\
-Za uvoz podatkov iz xml oblike sem poiskal novo podatke, saj sem imel pri poiskusu uvoza iz obstoječe strani nekaj težav. \\
-Naredil sem dva grafa in sicer število študentov skozi leta v ZDA in na Kitajskem. Zanimalo me je, kako vpliva kriza na število študentov(s tem se bom ukvarjal še pri napredni analizi podatkov) in kako vpliva gospodarski razvoj.\\
+Pri uvozu podatkov nisem imel večjih težav. V mapi uvoz sem napisal funkcijo za uvoz podatkov iz datokeke podatki.cvs. Dodal sem še ukaze, da mi pobriše nepotrebne stolpce. Težava je nastala le ob pogonu programa, saj je imel eden izmed podatkov vejico, kar pa sem opazil in popravil. 
+
+Za uvoz podatkov iz xml oblike sem poiskal novo podatke, saj sem imel pri poiskusu uvoza iz obstoječe strani nekaj težav. 
+
+Naredil sem dva grafa in sicer število študentov skozi leta v ZDA in na Kitajskem. Zanimalo me je, kako vpliva kriza na število študentov(s tem se bom ukvarjal še pri napredni analizi podatkov) in kako vpliva gospodarski razvoj.
+
 Za vpliv krize sem si izbral ZDA, ki je dobro razvito gospodarstvo oz. ni prišlo do resnega padca oz. vzpona ekonomske moči. Opazil sem, da kriza ne vpliva takoj na število študentov, ampak so njene posledice vidne čez leto ali dve. Tako se je število študentov v času zadnje krize(od leta 2008 naprej) povečevalo vse do leta 2010, ko je začelo upadati. Uporabil sem navaden graf, podatki pa so podani glede na 100000 prebivalcev. 
-\includegraphics{../slike/grafZDA.pdf}
-Za preučitev vpliva hitre rasti gospodarstva pa sem si izbral Kitajsko. Prvi večjo rast študentov na Kitajskem je zaslediti po letu 1976, kar lahko pripisujemo koncu kulturne revolucije. Od leta 1990, torej z začetkom hitre rasti Kitajske, se je število študentov zelo hitro večalo, kar potrdi mojo domnevo, da se z rastjo gospodarstva veča tudi število študentov(predvidevam zaradi prehoda iz agrarne družbe na industrijsko oz. visoko tehnološko družbo). \\
-\includegraphics{../slike/grafKit.pdf}
-\section{Analiza in vizualizacija podatkov} \\
-V tem delu sem naredil tri analize in njihove prikaze na zemljevidu. Večjih težav nisem imel. \\
-Najprej me je zanimalo, koliko študentov predčasno zapusti izobroževanje v državah Evropske unije. Izbral sem si leto 2013, ker me je zanimalo ali ima gospodarska kriza na to kakšen vpliv. Stopnja je povsod po Evropi več ali manj enaka( in je minimalna), izstopajo le južne države Evrope, ki jih je kriza najbolj prizadela. Pri me je presenetilo dejstvo, da ima Grčija kljub hudi krizi raven še vedno nekje v povprečju drugih evropskih držav. \\
-\includegraphics[width=\textwidth]{../slike/EU.pdf}\\
-Za drugo analizo pa me je zanimalo, iz katere regije prihaja največ študentov v Sloveniji. \\
-Naprej sem preveril za leto 2002. Opazil sem, da je v tem letu večino študentov prihajalo iz vzhodne Slovenije in da je bila razlika med vzhodnim in zahodnim delom kar očitna. Največ študentov je tako prihajalo iz prekmurske regije, najmanj pa presenetljivo iz osrednje slovenske. Nekega jasnega pojasnila ne znam najti, saj bi pričakoval, da bo iz zahodnje Slovenije, ki naj bi bil bolj razvit, prihajalo več študentov. \\
+
+\includegraphics[width=\textwidth]{../slike/grafZDA.pdf}
+
+Za preučitev vpliva hitre rasti gospodarstva pa sem si izbral Kitajsko. Prvi večjo rast študentov na Kitajskem je zaslediti po letu 1976, kar lahko pripisujemo koncu kulturne revolucije. Od leta 1990, torej z začetkom hitre rasti Kitajske, se je število študentov zelo hitro večalo, kar potrdi mojo domnevo, da se z rastjo gospodarstva veča tudi število študentov(predvidevam zaradi prehoda iz agrarne družbe na industrijsko oz. visoko tehnološko družbo). 
+
+\includegraphics[width=\textwidth]{../slike/grafKit.pdf}
+
+\section{Analiza in vizualizacija podatkov} 
+
+V tem delu sem naredil tri analize in njihove prikaze na zemljevidu. Večjih težav nisem imel. 
+
+Najprej me je zanimalo, koliko študentov predčasno zapusti izobroževanje v državah Evropske unije. Izbral sem si leto 2013, ker me je zanimalo ali ima gospodarska kriza na to kakšen vpliv. Stopnja je povsod po Evropi več ali manj enaka( in je minimalna), izstopajo le južne države Evrope, ki jih je kriza najbolj prizadela. Pri me je presenetilo dejstvo, da ima Grčija kljub hudi krizi raven še vedno nekje v povprečju drugih evropskih držav. 
+
+\includegraphics[width=\textwidth]{../slike/EU.pdf}
+
+Za drugo analizo pa me je zanimalo, iz katere regije prihaja največ študentov v Sloveniji. 
+
+Naprej sem preveril za leto 2002. Opazil sem, da je v tem letu večino študentov prihajalo iz vzhodne Slovenije in da je bila razlika med vzhodnim in zahodnim delom kar očitna. Največ študentov je tako prihajalo iz prekmurske regije, najmanj pa presenetljivo iz osrednje slovenske. Nekega jasnega pojasnila ne znam najti, saj bi pričakoval, da bo iz zahodnje Slovenije, ki naj bi bil bolj razvit, prihajalo več študentov. 
 
 \includegraphics[width=\textwidth]{../slike/stud2002.pdf}
- Za leto 2013 pa sem opazil, da se je število študentov skoraj enakomerno porazdeljeno po vseh slovenskih regijah. \\
+
+ Za leto 2013 pa sem opazil, da se je število študentov skoraj enakomerno porazdeljeno po vseh slovenskih regijah. 
+ 
 \includegraphics[width=\textwidth]{../slike/stud2013.pdf} 
 
-\section{Napredna analiza podatkov} \\
-Kot sem že prej omenil, sem se odločil, da bom pri napredni analizi podatkov probal ugotoviti povezavo med stopnjo gospodarske rasti in številom študentov. \\
-Najprej sem to povezavo preveril za Slovenijo. \\
-\includegraphics{../slike/napovedslo.pdf} 
+\section{Napredna analiza podatkov} 
+
+Kot sem že prej omenil, sem se odločil, da bom pri napredni analizi podatkov probal ugotoviti povezavo med stopnjo gospodarske rasti in številom študentov. 
+
+Najprej sem to povezavo preveril za Slovenijo. 
+
+\includegraphics[width=\textwidth]{../slike/napovedslo.pdf} 
+
 Kot sem nekako tudi pričakoval, neke dobre povezave med njima ni, predvsem zato, ker učinek gospodarske krize pride z zamikom, kar se lepo vidi na grafu.
-\includegraphics{../slike/grana.pdf}
-Povezava torej vsekakor je, vendar jo je z temi modeli zelo težko napovedati. Hkrati se je pojavila težava, saj se je v Sloveniji v 90 letih število študentov začelo zelo hitro povečevati, kar pa ne moremo pripisati visoko gopodarski rasti, ampak predvsem temu, da se je število univerz in programov na njih hitro večalo, s tem pa tudi število študentov. Zato sem se odločil, da bom probal to povezavo poizkati v primeru države, ki ima bolj "stabilno" število študentov. \\
-Vendar sem tudi v primeru ZDA ugotovil, da model ni najboljši, je pa zagotovo boljši kot v primeru Slovenije. \\
-\includegraphics{../slike/napovedzda.pdf}
-Vendar pa opazimo, da je število študentov največje, ko je gospodarska rast nekje okoli 2 odstotkov. Glede na to, da je to dokaj nizka gospodarska rast(cilj vsake razvite države je nekje okoli treh odstotkov), lahko sklepamo, da je število študentov najvišje ravno v letu, ko se kriza začne, pred tem pa je gospodarska rast visoka. \\
-\includegraphics{../slike/granazda.pdf}\\
-S pomočjo metode voditeljev pa sem še preveril, koliko procentov BDP-ja so države po svetu v letih od 2003 do 2013 porabile za izobroževanje. Pri tem sem imel manjše težave, saj so imeli procenti v tabeli decimalne številke in jih program ni zaznal kot numerične in sem jih mogel spremeniti. Opazil sem, da večina zahodnjih držav(zlasti skandinavske), del Afrike in južne Amerike za izobroževanje porabi največ, medtem ko srednje Afriške države, del arabskih držal in del južne Azije porabi najmanj.\\
-\includegraphics{../slike/celsvet.pdf}
+
+\includegraphics[width=\textwidth]{../slike/grana.pdf}
+
+Povezava torej vsekakor je, vendar jo je z temi modeli zelo težko napovedati. Hkrati se je pojavila težava, saj se je v Sloveniji v 90 letih število študentov začelo zelo hitro povečevati, kar pa ne moremo pripisati visoko gopodarski rasti, ampak predvsem temu, da se je število univerz in programov na njih hitro večalo, s tem pa tudi število študentov. Zato sem se odločil, da bom probal to povezavo poizkati v primeru države, ki ima bolj "stabilno" število študentov. 
+
+Vendar sem tudi v primeru ZDA ugotovil, da model ni najboljši, je pa zagotovo boljši kot v primeru Slovenije. 
+
+\includegraphics[width=\textwidth]{../slike/napovedzda.pdf}
+
+Vendar pa opazimo, da je število študentov največje, ko je gospodarska rast nekje okoli 2 odstotkov. Glede na to, da je to dokaj nizka gospodarska rast(cilj vsake razvite države je nekje okoli treh odstotkov), lahko sklepamo, da je število študentov najvišje ravno v letu, ko se kriza začne, pred tem pa je gospodarska rast visoka. 
+
+\includegraphics[width=\textwidth]{../slike/granazda.pdf}
+
+S pomočjo metode voditeljev pa sem še preveril, koliko procentov BDP-ja so države po svetu v letih od 2003 do 2013 porabile za izobroževanje. Pri tem sem imel manjše težave, saj so imeli procenti v tabeli decimalne številke in jih program ni zaznal kot numerične in sem jih mogel spremeniti. Opazil sem, da večina zahodnjih držav(zlasti skandinavske), del Afrike in južne Amerike za izobroževanje porabi največ, medtem ko srednje Afriške države, del arabskih držal in del južne Azije porabi najmanj.
+
+\includegraphics[width=\textwidth]{../slike/celsvet.pdf}
 
 
 
