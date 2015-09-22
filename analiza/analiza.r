@@ -115,5 +115,8 @@ k$tot.withinss
 drzave <- row.names(imf)
 m <- match(svet$name_long, drzave)
 barve <- rainbow(5)
-plot(svet, col = ifelse(is.na(m), "grey", barve[k$cluster[drzave[m]]]))
+koordinate2 <- coordinates(svet)
+plot(svet, col = ifelse(is.na(m), "grey", barve[k$cluster[drzave[m]]]), 
+     main = "Povprečna poraba za izobroževanje")
+     #sp.layout = (list(list("sp.text", koordinate2, drzave, cex = 0.4))))
 dev.off()
