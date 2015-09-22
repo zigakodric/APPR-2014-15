@@ -108,7 +108,6 @@ imf.norm <- scale(imf)
 k <- kmeans(imf.norm, 5)
 head(k$cluster, n = 15)
 table(k$cluster)
-View(k$centers)
 k <- kmeans(imf.norm, 5)
 k$tot.withinss   
 k <- kmeans(imf.norm, 5, nstart = 1000)
