@@ -118,5 +118,5 @@ barve <- rainbow(5)
 koordinate2 <- coordinates(svet)
 plot(svet, col = ifelse(is.na(m), "grey", barve[k$cluster[drzave[m]]]), 
      main = "Povprečna poraba za izobroževanje")
-     #sp.layout = (list(list("sp.text", koordinate2, drzave, cex = 0.4))))
+legend("left",c("nad 7%","5%-7%","4%-5%","3%-4%","pod 3%"), fill=barve, cex=0.9)
 dev.off()
