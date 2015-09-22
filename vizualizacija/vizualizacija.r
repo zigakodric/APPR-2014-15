@@ -72,7 +72,6 @@ slo <- uvozi.zemljevid("http://biogeo.ucdavis.edu/data/gadm2/shp/SVN_adm.zip",
 rregije <- preuredi(regije, slo)
 # Narišimo zemljevid v PDF.
 cat("Rišem zemljevid slovenije...\n")
-pdf("slike/slovenija1.pdf")
 #Spremenjene koordinate in imena za Slovenijo
 koordinate1 <- coordinates(slo)
 imena1 <- as.character(slo$NAME_1)
